@@ -1,0 +1,35 @@
+import java.io.IOException;
+import java.util.Date;
+
+public class Company {
+    public static void main(String[] args) {
+        Date now = new Date();
+        Worker[] Workers = new Worker[2];
+        Workers[0] = new Worker("Tom", "Kos", now);
+        Workers[1] = new Worker("Tom1", "Kos1", now);
+
+
+for (Worker x :Workers){
+    Worker.Show(x);
+}
+
+    }
+}
+
+class Worker {
+    String Name, Surname;
+    Date Start;
+
+    Worker(String N, String S, Date St) {
+        Name = N;
+        Surname = S;
+        Start = St;
+    }
+
+    static void Show(Worker worker) {
+        System.out.println(worker.Name);
+        System.out.println(worker.Surname);
+        System.out.println(worker.Start);
+    }
+
+}
